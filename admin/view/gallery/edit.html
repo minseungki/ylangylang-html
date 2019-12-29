@@ -42,12 +42,12 @@
         <div class="menu-inner">
           <nav>
             <ul class="metismenu" id="menu">
-              <li class="active"><a href="/admin/index.html"><i class="ti-dashboard"></i> <span>dashboard</span></a></li>
+              <li><a href="/admin/index.html"><i class="ti-dashboard"></i> <span>dashboard</span></a></li>
               <li><a href="/admin/view/login/login.html"><i class="ti-lock"></i> <span>로그인</span></a></li>
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-home"></i><span>메인 관리</span></a>
                 <ul class="collapse">
-                  <li><a href="/admin/view/main/mainImage/list.html">메인이미지 관리</a></li>
+                  <li><a href="/admin/view/main/mainImage/list.html">메인이미지 관리</a></li class="active">
                   <li><a href="/admin/view/main/popup/list.html">팝업 관리</a></li>
                 </ul>
               </li>
@@ -56,15 +56,15 @@
                 <ul class="collapse">
                   <li><a href="/admin/view/introduce/introduce/edit.html">학원소개 관리</a></li>
                   <li><a href="/admin/view/introduce/teacher/list.html">선생님 관리</a></li>
-                  <li><a href="/admin/view/introduce/history/list.html">학원연혁 관리</a></li>
+                  <li><a href="/admin/view/introduce/history/list.html">학원연혁 관리</a></li class="active">
                   <li><a href="/admin/view/introduce/location/edit.html">찾아오시는길 관리</a></li>
                 </ul>
               </li>
-              <li><a href="/admin/view/program/list.html"><i class="ti-desktop"></i> <span>프로그램 관리</span></a></li>
-              <li>
+              <li><a href="/admin/view/program/list.html"><i class="ti-desktop"></i> <span>프로그램 관리</span></a></li class="active">
+              <li class="active">
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>갤러리 관리</span></a>
                 <ul class="collapse">
-                  <li><a href="/admin/view/gallery/list1.html">유아부 관리</a></li>
+                  <li class="active"><a href="/admin/view/gallery/list1.html">유아부 관리</a></li>
                   <li><a href="/admin/view/gallery/list2.html">유치부 관리</a></li>
                   <li><a href="/admin/view/gallery/list3.html">초등부 관리</a></li>
                 </ul>
@@ -110,16 +110,16 @@
       <!-- page title area start -->
       <div class="page-title-area">
         <div class="row align-items-center">
-          <div class="col-sm-6">
-            <div class="breadcrumbs-area clearfix">
-              <h4 class="page-title pull-left">Dashboard</h4>
-              <ul class="breadcrumbs pull-left">
-                <li><span>Home</span></li>
-                <li><span>/</span></li>
-                <li><span>Dashboard</span></li>
-              </ul>
-            </div>
-          </div>
+            <div class="col-sm-6">
+                <div class="breadcrumbs-area clearfix">
+                  <h4 class="page-title pull-left">유아부 관리 <span>상세</span></h4>
+                  <ul class="breadcrumbs pull-left">
+                    <li><span>갤러리 관리</span></li>
+                    <li><span>></span></li>
+                    <li><span>유아부 관리</span></li>
+                  </ul>
+                </div>
+              </div>
           <div class="col-sm-6 clearfix">
             <div class="user-profile pull-right" style="background: white;">
                 <h4 class="user-name" style="cursor: auto;">user-name</h4>
@@ -129,9 +129,42 @@
       </div>
       <!-- page title area end -->
       <div class="main-content-inner">
-        일랑일랑 미술학원 Dashboard
+        <div class="row">
+            <div class="col-12 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="title">제목</label>
+                            <input type="text" class="form-control" id="title" placeholder="제목을 입력해주세요.">
+                            <div class="text-danger">제목을 입력해주세요.</div>
+                          </div>
+                          <div class="form-group">
+                            <label for="contents">내용</label>
+                            <input type="text" class="form-control" id="contents" placeholder="내용을 입력해주세요.">
+                            <div class="text-danger">내용을 입력해주세요.</div>
+                          </div>
+                          <div class="form-group" style="margin-bottom: 0px;">
+                            <label for="fileupload">이미지업로드</label>
+                            <input type="text" style="display: none;" id="fileupload">
+                          </div>
+                          <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                <label class="custom-file-label" for="inputGroupFile01">유아부.jpg</label>
+                            </div>
+                          </div>
+                          <div class="text-danger">파일을 업로드 해주세요.</div>
+                          <a href="javascript:void(0)" onclick="submit();" class="btn btn-outline-primary mt-4">수정</a>
+                          <a href="javascript:void(0)" onclick="remove();" class="btn btn-outline-primary mt-4">삭제</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
       </div>
     </div>
+
     <!-- main content area end -->
     <!-- footer area start-->
     <footer>
@@ -156,6 +189,16 @@
   <!-- others plugins -->
   <script src="/admin/assets/js/plugins.js"></script>
   <script src="/admin/assets/js/scripts.js"></script>
+
+  <script type="text/javascript">
+    function submit () {
+      confirm("저장하시겠습니까?");
+    }
+
+    function remove () {
+      confirm("삭제하시겠습니까?");
+    }
+  </script>
 </body>
 
 </html>

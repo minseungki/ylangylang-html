@@ -42,7 +42,7 @@
         <div class="menu-inner">
           <nav>
             <ul class="metismenu" id="menu">
-              <li class="active"><a href="/admin/index.html"><i class="ti-dashboard"></i> <span>dashboard</span></a></li>
+              <li><a href="/admin/index.html"><i class="ti-dashboard"></i> <span>dashboard</span></a></li>
               <li><a href="/admin/view/login/login.html"><i class="ti-lock"></i> <span>로그인</span></a></li>
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-home"></i><span>메인 관리</span></a>
@@ -55,12 +55,12 @@
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-info-alt"></i><span>학원소개 관리</span></a>
                 <ul class="collapse">
                   <li><a href="/admin/view/introduce/introduce/edit.html">학원소개 관리</a></li>
-                  <li><a href="/admin/view/introduce/teacher/list.html">선생님 관리</a></li>
-                  <li><a href="/admin/view/introduce/history/list.html">학원연혁 관리</a></li>
+                  <li><a href="/admin/view/introduce/teacher/list.html">선생님 관리</a></li class="active">
+                  <li><a href="/admin/view/introduce/history/list.html">학원연혁 관리</a></li class="active">
                   <li><a href="/admin/view/introduce/location/edit.html">찾아오시는길 관리</a></li>
                 </ul>
               </li>
-              <li><a href="/admin/view/program/list.html"><i class="ti-desktop"></i> <span>프로그램 관리</span></a></li>
+              <li><a href="/admin/view/program/list.html"><i class="ti-desktop"></i> <span>프로그램 관리</span></a></li class="active">
               <li>
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-palette"></i><span>갤러리 관리</span></a>
                 <ul class="collapse">
@@ -69,12 +69,12 @@
                   <li><a href="/admin/view/gallery/list3.html">초등부 관리</a></li>
                 </ul>
               </li>
-              <li>
+              <li class="active">
                 <a href="javascript:void(0)" aria-expanded="true"><i class="ti-comments-smiley"></i><span>커뮤니티 관리</span></a>
                 <ul class="collapse">
                   <li><a href="/admin/view/community/news/list.html">학원소식 관리</a></li>
-                  <li><a href="/admin/view/community/faq/list.html">자주묻는질문 관리</a></li>
-                  <li><a href="/admin/view/community/qna/list.html">1:1문의 관리</a></li>
+                  <li><a href="/admin/view/community/faq/list.html">자주묻는질문 관리</a></li class="active">
+                  <li class="active"><a href="/admin/view/community/qna/list.html">1:1문의 관리</a></li class="active">
                   <li><a href="/admin/view/community/reservation/list.html">상담예약 관리</a></li>
                   <li><a href="/admin/view/community/reservation/disable.html">상담예약 불가일자 관리</a></li>
                 </ul>
@@ -112,11 +112,11 @@
         <div class="row align-items-center">
           <div class="col-sm-6">
             <div class="breadcrumbs-area clearfix">
-              <h4 class="page-title pull-left">Dashboard</h4>
+              <h4 class="page-title pull-left">1:1문의 관리 <span>목록</span></h4>
               <ul class="breadcrumbs pull-left">
-                <li><span>Home</span></li>
-                <li><span>/</span></li>
-                <li><span>Dashboard</span></li>
+                <li><span>커뮤니티 관리</span></li>
+                <li><span>></span></li>
+                <li><span>1:1문의 관리</span></li>
               </ul>
             </div>
           </div>
@@ -128,10 +128,90 @@
         </div>
       </div>
       <!-- page title area end -->
+      <!-- main content area start -->
       <div class="main-content-inner">
-        일랑일랑 미술학원 Dashboard
+        <div class="row">
+          <div class="col-12 mt-5">
+            <div class="card">
+              <div class="card-body">
+                  <div class="single-table">
+                    <div class="table-responsive">
+                      <table class="table table-hover progress-table text-center">
+                        <thead class="text">
+                          <tr>
+                            <th><input type="checkbox"></th>
+                            <th scope="col">No.</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">답변여부</th>
+                            <th scope="col">등록일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td scope="row">15</td>
+                            <td><a href="/admin/view/community/qna/edit.html">로그인은 어떻게 하나요?</a></td>
+                            <td><span class="status-p bg-primary">답변완료</span></td>
+                            <td>2019.12.29</td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td scope="row">14</td>
+                            <td><a href="/admin/view/community/qna/edit.html">로그아웃은 어떻게 하나요?</a></td>
+                            <td><span class="status-p bg-primary">답변완료</span></td>
+                            <td>2019.11.11</td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td scope="row">13</td>
+                            <td><a href="/admin/view/community/qna/edit.html">상담예약은 어떻게 하나요?</a></td>
+                            <td></td>
+                            <td>2019.10.02</td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td scope="row">12</td>
+                            <td><a href="/admin/view/community/qna/edit.html">우리 아이의 사진을 보려면 어떻게 하나요?</a></td>
+                            <td></td>
+                            <td>2019.06.30</td>
+                          </tr>
+                          <tr>
+                            <td><input type="checkbox"></td>
+                            <td scope="row">11</td>
+                            <td><a href="/admin/view/community/qna/edit.html">원장님과 상담하고 싶어요 어떻게 하나요?</a></td>
+                            <td></td>
+                            <td>2019.05.05</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <nav aria-label="Page navigation example" style="margin-top: 20px;">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">«</span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">»</span>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- row end -->
       </div>
-    </div>
     <!-- main content area end -->
     <!-- footer area start-->
     <footer>
